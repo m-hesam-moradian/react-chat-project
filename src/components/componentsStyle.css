@@ -1,0 +1,115 @@
+.home-container {
+  background-color: aqua;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+}
+.Chat {
+  display: flex;
+  flex: 2;
+  background-color: var(--background-color);
+}
+
+/* ------------------Sidebar------------------- */
+.Sidebar {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: var(--dark-color);
+}
+/* ------------------navbar---------------  */
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(#0000003a, #0000003a);
+}
+.profile {
+  display: flex;
+  flex: 2;
+  justify-content: space-between;
+  flex: 1;
+}
+.nav-logo {
+  flex: 1;
+  color: white;
+  padding: 9px 0px 0 15px;
+  transition: all 0.3s;
+}
+.nav-logo:hover {
+  text-shadow: 0px 0px 16px var(--background-color);
+}
+.nav-btn {
+  border-radius: 0;
+  background: linear-gradient(#0000005a, #0000005a);
+  border: none;
+  width: 68px;
+  font-size: small;
+  padding: 7px;
+  transition: all 0.3s;
+}
+.nav-btn:hover {
+  background: linear-gradient(#ffffff27, #ffffff27);
+}
+.profile-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px var(--background-color);
+  margin-top: 5px;
+  transition: all 0.3s;
+}
+.profile-img:hover {
+  box-shadow: 0px 0px 18px var(--background-color);
+}
+/* ------------------navbar---------------  */
+/* ------------------search------------------- */
+.search-input {
+  width: 100%;
+  height: 2rem;
+  background: linear-gradient(#ffffff29, #ffffff29);
+  transition: 0.3s;
+  font-size: large;
+  font-weight: bold;
+  /* color: var(--dark-color); */
+  padding-left: 1rem;
+}
+.search-input:focus {
+  width: 100%;
+  height: 3rem;
+  background: linear-gradient(#ffffff29, #ffffff29);
+  outline: none;
+  /* border: none; */
+}
+.search-input::placeholder {
+  color: rgba(0, 0, 0, 0.667);
+  font-size: medium;
+  font-weight: 300;
+}
+.search-form .profile-img {
+  width: 60px;
+  height: 60px;
+  margin: 0 2rem;
+}
+.search-result-user {
+  padding: 1rem;
+  border-bottom: 1px solid #ffffff1a;
+  font-size: x-large;
+  color: #ffffffb3;
+  transition: all 0.3s;
+}
+.search-result-user:hover {
+  padding: 1rem;
+  border-bottom: 1px solid #ffffff1a;
+  font-size: xx-large;
+  color: #ffffff;
+  background: linear-gradient(#0000005a, #0000005a);
+}
+
+/* ------------------search------------------- */
+/* ------------------Sidebar------------------- */

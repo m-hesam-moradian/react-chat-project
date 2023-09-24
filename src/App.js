@@ -1,8 +1,9 @@
 import React from "react";
-import Register from "./pages/Register";
+import Home from "./pages/Home";
 import "./pages/pageStyle.css";
 import "./mainStyle.css";
+import "./components/componentsStyle.css";
 
 export default function App() {
-  return <Register></Register>;
+  return <Home />;
 }
