@@ -188,9 +188,10 @@
 /* --------------------message------------------- */
 
 .Messages {
-  height: calc(100% - 5rem);
+  height: calc(100% - 4rem);
   padding: 3rem 3rem;
   overflow-y: auto;
+      padding-top: 8rem;
 }
 .Message {
   display: flex;
@@ -233,9 +234,71 @@
 /* --------------------input------------------- */
 
 .TypeInput {
-  height: 5rem;
+  height: 4rem;
+  background: var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
+.TypeInput .text-input {
+  flex: 1;
+  height: 100%;
+  border: 0;
+  font-size: larger;
+  padding: 0 2rem;
+}
+.TypeInput .text-input:focus {
+  border: none;
+  outline: none;
+}
+.input-icons svg {
+  font-size: 2rem;
+  color: var(--vanish-color);
+  cursor: pointer;
+  padding: 3px;
+}
+.input-icons button svg {
+  font-size: 2rem;
+  color: var(--white-color);
+  cursor: pointer;
+  padding: 3px;
+}
+.input-icons {
+  height: 100%;
+}
+.input-icons button {
+  height: 100%;
+  outline: none;
+  border: none;
+  background: var(--text-color);
+  font-weight: bold;
+  color: var(--white-color);
+  padding: 1rem;
+  margin-left: 1rem;
+  border-radius: 5px 0px 0px 5px;
+      padding-right: 0.3rem;
+      transition: all 0.4s;
+}
+.input-icons button:hover  {
+/* box-shadow: -10rem 10rem 10rem;
+ */
+scale: 1.1 1;
+}
+/* Define the size of the scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Customize the color of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-color);
+}
+
+/* Customize the color of the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
 /* --------------------input------------------- */
 
 /* -------------------chat----------------------- */
