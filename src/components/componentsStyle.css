@@ -9,11 +9,6 @@
   top: 0;
   display: flex;
 }
-.Chat {
-  display: flex;
-  flex: 2;
-  background-color: var(--background-color);
-}
 
 /* ------------------Sidebar------------------- */
 .Sidebar {
@@ -24,11 +19,14 @@
 }
 /* ------------------navbar---------------  */
 .Navbar {
+  height: 6rem;
+
   gap: 2rem;
   padding: 1.5rem 1.7rem;
   display: flex;
   background: linear-gradient(#0000003a, #0000003a);
   justify-content: space-between;
+  align-items: center;
 }
 .profile {
   display: flex;
@@ -101,8 +99,10 @@
   color: var(--background-color);
   border: 1px solid var(--background-color);
   outline: none;
+  /* display: none; */
 }
 .search-input:focus {
+  /* display: block; */
   width: 100%;
   height: 3rem;
   background: linear-gradient(#ffffff29, #ffffff29);
@@ -150,3 +150,92 @@
   font-weight: 100;
 }
 /* ------------------Sidebar------------------- */
+/* -------------------chat----------------------- */
+.Chat {
+  position: relative;
+  /* display: flex; */
+  flex: 2;
+  background-color: var(--background-color);
+}
+/* --------------------chatNavbar------------------- */
+.chatNavbar {
+  gap: 2rem;
+  padding: 1.5rem 1.7rem;
+  display: flex;
+  background: linear-gradient(var(--vanish-color), var(--vanish-color));
+  justify-content: space-between;
+  height: 6rem;
+  align-items: center;
+  font-size: 1.5rem;
+  color: var(--white-color);
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+.navbar-name {
+  /* font-size: 1.5rem; */
+}
+.navbar-icon {
+  font-size: 2rem;
+}
+.navbar-icons-container {
+  display: flex;
+  gap: 2rem;
+}
+
+/* --------------------chatNavbar------------------- */
+
+/* --------------------message------------------- */
+
+.Messages {
+  height: calc(100% - 5rem);
+  padding: 3rem 3rem;
+  overflow-y: auto;
+}
+.Message {
+  display: flex;
+}
+.Message p {
+  border-radius: 0 10px 10px;
+  background: var(--white-color);
+  /* top: 2rem; */
+  /* position: relative; */
+  padding: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 2rem;
+  /* left: 1rem; */
+}
+.myMessage p {
+  color: var(--white-color);
+  background: var(--text-color);
+  border-radius: 10px 0px 10px 10px;
+}
+.Message span {
+  font-size: small;
+  color: gray;
+}
+.myMessage {
+  flex-direction: row-reverse;
+}
+.message-prfile {
+  display: block;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid gray;
+}
+.message-content {
+  max-width: 70%;
+}
+/* --------------------message------------------- */
+/* --------------------input------------------- */
+
+.TypeInput {
+  height: 5rem;
+}
+
+/* --------------------input------------------- */
+
+/* -------------------chat----------------------- */
