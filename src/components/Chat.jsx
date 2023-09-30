@@ -3,6 +3,9 @@ import ChatNavbar from "./chatbar/ChatNavbar";
 import Messages from "./chatbar/Messages";
 import TypeInput from "./chatbar/TypeInput";
 
+
+// const messageRef=firestore.collection('messages')
+
 const Chat = () => {
   return (
     <div className="Chat">
