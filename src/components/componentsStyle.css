@@ -31,7 +31,6 @@
   .input-icons button {
     padding-right: auto !important;
   }
-
 }
 /* mobile  */
 
@@ -286,6 +285,15 @@
   margin-top: 2rem;
   /* left: 1rem; */
 }
+.Message .messageIMG {
+  border-radius: 10px;
+  margin-top: 2rem;
+  background: var(--white-color);
+
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .myMessage p {
   color: var(--white-color);
   background: var(--text-color);
@@ -307,6 +315,8 @@
   border: 1px solid gray;
 }
 .message-content {
+  display: flex;
+  flex-direction: row-reverse;
   max-width: 70%;
 }
 /* --------------------message------------------- */

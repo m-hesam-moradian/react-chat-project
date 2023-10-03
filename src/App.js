@@ -1,19 +1,30 @@
 import React from "react";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
+import Login from "./pages/Login";
 import "./pages/pageStyle.css";
 import "./mainStyle.css";
 import "./components/componentsStyle.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "./context/authContext";
 
 export default function App() {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form data:");
-    // Perform any necessary actions, such as sending the form data to an API or updating the state of the component
-  };
+  const { currentUser } = useContext(AuthContext)
+  console.log(currentUser);
   return (
     <div>
-      <Register />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />}>
+            {/* <Route path="*" element={<NoPage />} /> */}
+          </Route>
+          <Route path="/home" element={<Home />}>
+          </Route>
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

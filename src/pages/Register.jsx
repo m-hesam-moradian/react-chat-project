@@ -8,24 +8,28 @@ import {
   uploadBytesResumable,
   getDownloadURL,
 } from "firebase/storage";
-
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { doc, setDoc } from "firebase/firestore";
 
 const Register = () => {
+  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [err, serErr] = useState(false);
   const handleSubmit = async (e) => {
+    
     e.preventDefault();
     const displayName = e.target[0].value;
     const email = e.target[1].value;
     const password = e.target[2].value;
     const file = e.target[3].files[0];
+    
     try {
       const res = await createUserWithEmailAndPassword(auth, email, password);
-
+      
       const storageRef = ref(storage, displayName);
-
+      
       const uploadTask = uploadBytesResumable(storageRef, file);
-
+      
       uploadTask.on(
         (error) => {
           serErr(true);
@@ -37,11 +41,13 @@ const Register = () => {
               photoURL: downloadURL,
             });
             await setDoc(doc(db, "users", res.user.uid), {
-              uid:res.user.uid,
+              uid: res.user.uid,
               displayName,
               email,
-              photoURL:downloadURL
+              photoURL: downloadURL,
             });
+            await setDoc(doc(db, "userChats", res.user.uid),{});
+            navigate("/");
           });
         }
       );
@@ -49,6 +55,7 @@ const Register = () => {
       serErr(true);
     }
   };
+
   return (
     <div className="form-container">
       <div className="form-box">
@@ -68,6 +75,7 @@ const Register = () => {
         </form>
         <p>
           you do have an acount? <span className="login-link">login</span>
+          {/* <Link to='/'>link</Link> */}
         </p>
       </div>
     </div>
