@@ -3,7 +3,7 @@ import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth, storage, db } from "../firebase";
 import { useState } from "react";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { doc, setDoc } from "firebase/firestore";
 
 const Register = () => {
@@ -67,7 +67,7 @@ const Register = () => {
           {err && <span>somthing went wrong</span>}
         </form>
         <p>
-          you do have an acount? <span className="login-link">login</span>
+          you do have an acount? <Link to='/login' className="login-link">login</Link>
           {/* <Link to='/'>link</Link> */}
         </p>
       </div>

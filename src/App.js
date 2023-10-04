@@ -17,7 +17,7 @@ export default function App() {
     if (!currentUser) {
       return <Navigate to="/login" />;
     } else {
-      return <Home />;
+      return children;
     }
   };
 
