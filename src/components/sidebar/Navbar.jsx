@@ -1,5 +1,8 @@
+import { signOut } from "firebase/auth";
 import React from "react";
 import { BsSearch } from "react-icons/bs";
+import { auth } from "../../firebase";
+
 const Navbar = () => {
   return (
     <>
@@ -14,7 +17,7 @@ const Navbar = () => {
             {/* <div className="nav-name">hesam</div> */}
             <span>hesam</span>
           </div>
-          <button className="btn btn-secondary nav-btn ">Log out</button>
+          <button onClick={()=>signOut(auth)} className="btn btn-secondary nav-btn " >Log out</button>
         </div>
       </div>
     </>
