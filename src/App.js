@@ -11,11 +11,13 @@ import { AuthContext } from "./context/authContext";
 
 export default function App() {
   const { currentUser } = useContext(AuthContext);
-  // console.log(currentUser);
+  console.log(currentUser);
 
   const ProteceRoute = ({ children }) => {
     if (!currentUser) {
       return <Navigate to="/login" />;
+    } else {
+      return <Home />;
     }
   };
 

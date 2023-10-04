@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 const Login = () => {
   const [err, setErr] = useState(false);
@@ -12,8 +13,10 @@ const Login = () => {
     const password = e.target[1].value;
 
     try {
+      <Navigate to="/" />;
       await signInWithEmailAndPassword(auth, email, password);
-      navigate("/login");
+      navigate("/");
+      console.log("Login Successful!");
     } catch (err) {
       setErr(true);
     }
