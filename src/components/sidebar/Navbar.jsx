@@ -2,8 +2,12 @@ import { signOut } from "firebase/auth";
 import React from "react";
 import { BsSearch } from "react-icons/bs";
 import { auth } from "../../firebase";
+import { useContext } from "react";
+import { AuthContext } from "../../context/authContext";
 
 const Navbar = () => {
+  const { currentUser } = useContext(AuthContext);
+  console.log(currentUser);
   return (
     <>
       <div className="Navbar">
@@ -13,11 +17,16 @@ const Navbar = () => {
         </label>
         <div className="profile">
           <div className="acount">
-            <img className="profile-img" src="/images/me.png" alt="" />
+            <img className="profile-img" src={currentUser.photoURL} alt="" />
             {/* <div className="nav-name">hesam</div> */}
-            <span>hesam</span>
+            <span>{currentUser.displayName} </span>
           </div>
-          <button onClick={()=>signOut(auth)} className="btn btn-secondary nav-btn " >Log out</button>
+          <button
+            onClick={() => signOut(auth)}
+            className="btn btn-secondary nav-btn "
+          >
+            Log out
+          </button>
         </div>
       </div>
     </>
