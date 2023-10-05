@@ -8,7 +8,7 @@ const Sidebar = () => {
     <div className="Sidebar">
       <Navbar></Navbar>
       <Searchbar></Searchbar>
-      <Contacts></Contacts>
+      {/* <Contacts></Contacts> */}
     </div>
   );
 };
