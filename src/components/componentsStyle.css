@@ -223,6 +223,11 @@
   color: var(--background-color);
   font-weight: 100;
 }
+
+.search-contacts{
+  background-color: #736195;
+  transition: 0.4s;
+}
 /* ------------------Sidebar------------------- */
 /* -------------------chat----------------------- */
 .Chat {
