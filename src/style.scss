@@ -15,17 +15,17 @@
 }
 
 :root {
-  --primary-color: #007bff; // Initial color value
+  --primary-color: #2264aa; // Initial color value
 }
 
 $main: var(--primary-color);
-$c1: --primary-color;
+$c1: var(--primary-color);
 $white: #ffffff;
-$c3: --primary-color;
-$c4: --primary-color;
-$c5: --primary-color;
-$c6: --primary-color;
-$c7: --primary-color;
+$c3: var(--primary-color);
+$c4: var(--primary-color);
+$c5: var(--primary-color);
+$c6: var(--primary-color);
+$c7: var(--primary-color);
 $c8: $white;
 $c9: lightgray;
 
@@ -63,8 +63,8 @@ $gray: gray;
   justify-content: center;
 
   .formWrapper {
-    background-color: $white;
     padding: 20px 60px;
+    background: linear-gradient(#ffffff99, #ffffff);
     border-radius: 10px;
     display: flex;
     flex-direction: column;

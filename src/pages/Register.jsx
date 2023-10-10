@@ -5,6 +5,48 @@ import { auth, db, storage } from "../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
 import { useNavigate, Link } from "react-router-dom";
+let selectedColor = "gray";
+// Generate a random number between 1 and 10
+const randomNumber = Math.floor(Math.random() * 10) + 1;
+
+// Use a switch-case statement to handle different cases
+switch (randomNumber) {
+  case 1:
+    selectedColor = "#be1f1f";
+    break;
+  case 2:
+    selectedColor = "#be731f";
+    break;
+  case 3:
+    selectedColor = "#b7be1f";
+    break;
+  case 4:
+    selectedColor = "#4dbe1f";
+    break;
+  case 5:
+    selectedColor = "#1fbe95";
+    break;
+  case 6:
+    selectedColor = "#1f8fbe";
+    break;
+  case 7:
+    selectedColor = "#1f43be";
+    break;
+  case 8:
+    selectedColor = "#531fbe";
+    break;
+  case 9:
+    selectedColor = "#9a1fbe";
+    break;
+  case 10:
+    selectedColor = "#be1f79";
+    break;
+  default:
+    console.log("Invalid random number");
+    break;
+}
+
+document.documentElement.style.setProperty("--primary-color", selectedColor);
 
 const Register = () => {
   const [err, setErr] = useState(false);
