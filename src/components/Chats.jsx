@@ -5,7 +5,7 @@ import { ChatContext } from "../context/ChatContext";
 import { db } from "../firebase";
 
 const Chats = () => {
-  let color=''
+  // let color=''
   const [chats, setChats] = useState([]);
 
   const { currentUser } = useContext(AuthContext);
@@ -40,45 +40,45 @@ const Chats = () => {
 
 
 
-  const randomNumber = Math.floor(Math.random() * 10) + 1;
+  // const randomNumber = Math.floor(Math.random() * 10) + 1;
 
-  // Use a switch-case statement to handle different cases
-  switch (randomNumber) {
-    case 1:
-      color = "#be1f1f";
-      break;
-    case 2:
-      color = "#be731f";
-      break;
-    case 3:
-      color = "#b7be1f";
-      break;
-    case 4:
-      color = "#4dbe1f";
-      break;
-    case 5:
-      color = "#1fbe95";
-      break;
-    case 6:
-      color = "#1f8fbe";
-      break;
-    case 7:
-      color = "#1f43be";
-      break;
-    case 8:
-      color = "#531fbe";
-      break;
-    case 9:
-      color = "#9a1fbe";
-      break;
-    case 10:
-      color = "#be1f79";
-      break;
-    default:
-      console.log("Invalid random number");
-      break;
-  }
-  document.documentElement.style.setProperty("--primary-color", color);
+  // // Use a switch-case statement to handle different cases
+  // switch (randomNumber) {
+  //   case 1:
+  //     color = "#be1f1f";
+  //     break;
+  //   case 2:
+  //     color = "#be731f";
+  //     break;
+  //   case 3:
+  //     color = "#b7be1f";
+  //     break;
+  //   case 4:
+  //     color = "#4dbe1f";
+  //     break;
+  //   case 5:
+  //     color = "#1fbe95";
+  //     break;
+  //   case 6:
+  //     color = "#1f8fbe";
+  //     break;
+  //   case 7:
+  //     color = "#1f43be";
+  //     break;
+  //   case 8:
+  //     color = "#531fbe";
+  //     break;
+  //   case 9:
+  //     color = "#9a1fbe";
+  //     break;
+  //   case 10:
+  //     color = "#be1f79";
+  //     break;
+  //   default:
+  //     console.log("Invalid random number");
+  //     break;
+  // }
+  // document.documentElement.style.setProperty("--primary-color", color);
 
 
 
