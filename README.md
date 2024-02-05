@@ -1,12 +1,6 @@
 <div align='center' width='100%'>
  
- # Full Responsive SPA(FP) ReactJS Online Shop(E Commerce)
 
-### front website developed with react and backend developed with fake firebase API
-
-### URL Website:  <a href='https://m-hesam-moradian.github.io/onlineShopReactFirebase/'>https://m-hesam-moradian.github.io/onlineShopReactFirebase/</a>$${\color{orange}please \space  \color{white}Use \space \color{red} VPN }$$ 
-
-i use the project UI from a wordpress website:<a href='https://halochin.ir/electronic-shop/'>wordpress website</a>
 
 </div>
 <br><br>
@@ -21,7 +15,7 @@ i use the project UI from a wordpress website:<a href='https://halochin.ir/elect
 <h1  >  $${\color{blue}Main \space \color{lightblue} Page}$$</h1>
 
 <img src='https://github.com/m-hesam-moradian/react-chat-project/blob/main/src/ezgif-5-d76ea0eb9b.gif?raw=true' width='50%' >
-<h2> online demo of website : <a href='https://m-hesam-moradian.github.io/onlineShopReactFirebase/'>https://m-hesam-moradian.github.io/onlineShopReactFirebase/</a> $${\color{orange}please \space  \color{white}Use \space \color{red} VPN }$$  </h2>
+<h2> online demo of website : <a href=''>https://m-hesam-moradian.github.io/onlineShopReactFirebase/</a> $${\color{orange}please \space  \color{white}Use \space \color{red} VPN }$$  </h2>
 </div>
 
 <br><br>
